@@ -5,19 +5,28 @@ public class Application {
 
 	public static void main(String[] args) {
 
+		// Create Doubly Linked List head node
+			Node<Integer> node = new Node<Integer>( 100 );
 		
-		DoublyLinkedList<Integer> dll = new DoublyLinkedList<Integer>( null );
+		// Create Doubly Linked List
+			DoublyLinkedList<Integer> doublyLinkedList = new DoublyLinkedList<Integer>( node );
 		
 		
-		dll.push( 100 );
-		dll.append(200);
-		dll.append(300);
-		dll.append(400);
-		dll.append(500);
+		// Insert first node
+			doublyLinkedList.push(100);
+		// Insert last node
+			doublyLinkedList.append(200);
+		// Insert node at index
+			doublyLinkedList.insertAtIndex(1, 300);
+		// Insert before Node
+			doublyLinkedList.insertBefore(doublyLinkedList.head, 400 );
+		// Insert after Node
+			doublyLinkedList.insertAfter(doublyLinkedList.head.next, 400 );
 		
-		dll.printNodes();
 		
-		System.out.println();
+		// Print all nodes
+			doublyLinkedList.printNodes();
+		
 		
 		
 		
